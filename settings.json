@@ -1,256 +1,384 @@
 {
-    "workbench.editor.enablePreview": false,
+  "terminal.integrated.suggest.enabled": true,
 
-    // para que la terminal tenga autocompletado
-    "terminal.integrated.suggest.enabled": true,
+  // Activa los errores de TypeScript en tiempo real
+  "typescript.validate.enable": true,
 
-    // Activa los errores de TypeScript en tiempo real
-    "typescript.validate.enable": true,
+  // Usa la versión de TypeScript instalada en tu proyecto (si la hay)
+  "typescript.tsdk": "node_modules/typescript/lib",
 
-    // Usa la versión de TypeScript instalada en tu proyecto (si la hay)
-    "typescript.tsdk": "node_modules/typescript/lib",
+  // VSCode muestra un mensaje preguntándote si quieres usar esa versión del proyecto cuando abre el workspace.
+  "typescript.enablePromptUseWorkspaceTsdk": true,
 
-    // VSCode muestra un mensaje preguntándote si quieres usar esa versión del proyecto cuando abre el workspace.
-    "typescript.enablePromptUseWorkspaceTsdk": true,
+  // Config VS Code
+  "workbench.colorTheme": "One Dark Pro Night Flat",
 
-    "[typescript]": {
-        "editor.inlineSuggest.enabled": true
-    },
+  // Para que VS Code no sobreescriba mis colores usar false
+  "editor.semanticHighlighting.enabled": "configuredByTheme",
 
-    // Config VS Code
-    "workbench.colorTheme": "One Dark Pro Night Flat",
-    
-    // Para que VS Code no sobreescriba mis colores usar false
-    "editor.semanticHighlighting.enabled": "configuredByTheme",
+  "editor.semanticTokenColorCustomizations": {
+    "rules": {
+      // "variable": "#72c8f7",      // Color para variables
+      "property": "#e06c75", // Color propiedades de objetos
+      "function": "#DCDCAA",
+      "method": "#d3eb4a", // Color para métodos
+      "parameter": "#b6dff3", // Color para funciones
+      "class": "#2bff00", // Color para clases
+      "interface": "#E5C07B", // Para la declaración no para el constructor
+      "type": "#E5C07B", // "" "" "" "" "" "" "" "" "" ""
+      "enum": "#E5C07B" // "" "" "" "" "" "" "" "" "" ""
+    }
+  },
 
-    "editor.semanticTokenColorCustomizations": {
-            "rules": {
-                // "variable": "#72c8f7",      // Color para variables
-                "property": "#e06c75",      // Color propiedades de objetos
-                "function": "#DCDCAA",
-                "method": "#d3eb4a",        // Color para métodos
-                "parameter": "#b6dff3",     // Color para funciones
-                "class": "#2bff00",         // Color para clases
-                "interface": "#E5C07B",     // Para la declaración no para el constructor
-                "type": "#E5C07B",          // "" "" "" "" "" "" "" "" "" ""
-                "enum": "#E5C07B"         // "" "" "" "" "" "" "" "" "" ""
-            }
-    },
-
-    "editor.tokenColorCustomizations": {
-        "textMateRules": [
-        {
-            "name": "Comentarios",
-            "scope": [
-                "comment",
-                "punctuation.definition.comment",
-                "comment.block.documentation",
-                "comment.line.double-slash",
-                "comment.line.number-sign"
-            ],
-            "settings": {
-                "fontStyle": "italic",
-                "foreground": "#6A9955"
-            }
-        },
-        {
-            "name": "Keywords",
-            "scope": [
-                "keyword",
-                "keyword.other.unit",
-                "keyword.other.unit.px.css",
-                "keyword.other.unit.rem.css",
-                "punctuation.separator.key-value.html", // Html simbolo = en Attr
-                "keyword.operator.gradient.css"
-            ],
-            "settings": {
-                "fontStyle": "bold",
-                "foreground": "#C586C0"
-            }
-        },
-        {
-            "name": "Variables",
-            "scope": [
-                "variable",
-                "variable.other",
-                "variable.other.readwrite",
-                "variable.other.readwrite.ts",
-                "variable.other.readwrite.tsx",
-                "variable.other.constant",
-                "variable.other.constant.ts",
-                "variable.other.constant.tsx",
-                "support.type.property-name.css",
-                "support.type.property-name.media.css"
-            ],
-            "settings": {
-                "foreground": "#75c7f3"
-            }
-        },
-        {
-            "name": "Constantes",
-            "scope": [
-                "constant",
-                "variable.other.constant",
-                "constant.numeric"
-            ],
-            "settings": {
-                "foreground": "#0d9cee"
-            }
-        },
-        {
-            "name": "Cadenas de texto",
-            "scope": [
-                "string",
-                "string.quoted.double",
-                "string.quoted.single",
-                "constant.numeric.css",
-                "constant.other.color.rgb-value.hex.css",
-                "support.constant.color.w3c-standard-color-name.css",
-                "support.constant.color.w3c-extended-color-name.css",
-                "string.quoted.double.html"
-            ],
-            "settings": {
-                "foreground": "#CE9178"
-            }
-        },
-        {
-            "name": "Números",
-            "scope": [
-                "constant.numeric",
-                "constant.numeric.ts",
-                "constant.numeric.tsx"
-            ],
-            "settings": {
-              "foreground": "#3651eb"
-            }
-        },
-        {
-            "name": "Funciones(métodos)",
-            "scope": [
-                "entity.name.function",
-                "entity.name.type",
-                "entity.other.attribute-name.html", // Attr html
-                "punctuation.definition.entity.css",
-                "meta.property-list.css",
-                "punctuation.separator.key-value.css",
-                "entity.other.attribute-name.pseudo-class.css",
-                "entity.other.attribute-name.pseudo-element.css",
-                "source.css"
-            ],
-            "settings": {
-                "fontStyle": "bold",
-                "foreground": "#d3eb4a"
-            }
-        },
-        {
-            "name": "Funciones CSS",
-            "scope": [
-                "meta.function.variable.css",
-                "support.function.gradient.css",
-                "support.function.misc.css"
-            ],
-            "settings": {
-                "fontStyle": "bold",
-                "foreground": "#DCDCAA"
-            }
-        },
-        {
-            "name": "Clases",
-            "scope": [
-                "support.class",
-                "entity.name.class",
-                "entity.name.type.class"
-            ],
-            "settings": {
-                "fontStyle": "bold",
-                "foreground": "#2bff00"
-            }
-        },
-        {
-            "name": "This",
-            "scope": [
-                "variable.language",
-                "variable.language.this",
-                "variable.language.this.js",
-                "variable.language.this.ts",
-                "variable.language.this.tsx",
-                "variable.language.arguments",
-                "variable.language.arguments.ts"
-            ],
-            "settings": {
-                "foreground": "#e06c75"
-            }
-        },
-        {
-            "name": "Propiedades Obj TS y JS",
-            "scope": [
-                "variable.other.property.ts",
-                "variable.other.property.js",
-                "meta.object-literal.key constant.numeric", // Captura las keys numéricas en objetos
-                "entity.other.attribute-name.class.css",
-                "entity.other.attribute-name.id.css",
-                "meta.property-name.css"
-            ],
-            "settings": {
-                "foreground": "#e06c75"
-            }
-        },
-        {
-            "name": "CSS valores",
-            "scope": [
-                "support.function.misc.css",
-                "support.constant.font-name.css"
-            ],
-            "settings": {
-                "foreground": "#f5953b"
-            }
-        },
-        {
-            "name": "CSS sin Bold",
-            "scope": [
-                "support.type.property-name.css",
-                "support.type.property-name.media.css"
-            ],
-            "settings": {
-                "fontStyle": ""
-            }
-        },
-        {
-            "name": "Key @keyframe",
-            "scope": [
-                "variable.parameter.keyframe-list.css"
-            ],
-            "settings": {
-                "fontStyle": "",
-                "foreground": "#0befff"
-            }
-        },
-        {
-            "name": "HTML texto, =, prop privada",
-            "scope": [
-                "text.html.derivative",
-                "keyword.operator.assignment.js",     // operador = en JS
-                "keyword.operator.assignment.ts",
-                "variable.object.property.js",        // propiedad privada
-                "variable.other.object.property.js",  // propiedad privada como propiedad
-                "support.constant.property-value.css"
-            ],
-            "settings": {
-                "foreground": "#dddddd"
-            }
-        },
-        {
-            "name": "Errores",
-            "scope": [
-                "invalid",
-                "invalid.deprecated",
-                "invalid.illegal"
-            ],
-            "settings": {
-                "foreground": "#F44747"
-            }
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "name": "Comentarios",
+        "scope": [
+          "comment",
+          "punctuation.definition.comment",
+          "comment.block.documentation",
+          "comment.line.double-slash",
+          "comment.line.number-sign"
+        ],
+        "settings": {
+          "fontStyle": "italic",
+          "foreground": "#6A9955"
         }
-        ]
-    },
-    "workbench.iconTheme": "material-icon-theme"
-}      
+      },
+      {
+        "name": "Keywords",
+        "scope": [
+          "keyword",
+          "keyword.other.unit",
+          "keyword.other.unit.px.css",
+          "keyword.other.unit.rem.css",
+          "punctuation.separator.key-value.html", // Html simbolo = en Attr
+          "keyword.operator.gradient.css"
+        ],
+        "settings": {
+          "fontStyle": "bold",
+          "foreground": "#C586C0"
+        }
+      },
+      {
+        "name": "Variables",
+        "scope": [
+          "variable",
+          "variable.other",
+          "variable.other.readwrite",
+          "variable.other.readwrite.ts",
+          "variable.other.readwrite.tsx",
+          "variable.other.constant",
+          "variable.other.constant.ts",
+          "variable.other.constant.tsx",
+          "support.type.property-name.css",
+          "support.type.property-name.media.css"
+        ],
+        "settings": {
+          "foreground": "#75c7f3"
+        }
+      },
+      {
+        "name": "Constantes",
+        "scope": [
+          "constant",
+          "variable.other.constant",
+          "constant.numeric",
+          "support.type.builtin.tsx"
+        ],
+        "settings": {
+          "foreground": "#0d9cee"
+        }
+      },
+      {
+        "name": "Cadenas de texto",
+        "scope": [
+          "string",
+          "string.quoted.double",
+          "string.quoted.single",
+          "constant.numeric.css",
+          "constant.other.color.rgb-value.hex.css",
+          "support.constant.color.w3c-standard-color-name.css",
+          "support.constant.color.w3c-extended-color-name.css",
+          "string.quoted.double.html"
+        ],
+        "settings": {
+          "foreground": "#CE9178"
+        }
+      },
+      {
+        "name": "Números",
+        "scope": [
+          "constant.numeric",
+          "constant.numeric.ts",
+          "constant.numeric.tsx"
+          // "constant.numeric.css",
+        ],
+        "settings": {
+          "foreground": "#0749ff"
+        }
+      },
+      {
+        "name": "Funciones CSS",
+        "scope": [
+          "meta.function.variable.css",
+          "support.function.gradient.css",
+          "support.function.misc.css",
+          "meta.definition.function.js",
+          "entity.name.function.js"
+        ],
+        "settings": {
+          "fontStyle": "bold",
+          "foreground": "#DCDCAA"
+        }
+      },
+      {
+        "name": "Funciones(métodos)",
+        "scope": [
+          // "entity.name.function",
+          // "meta.function-call.js",
+          "entity.name.type",
+          "entity.other.attribute-name.html", // Attr html
+          "punctuation.definition.entity.css",
+          "meta.property-list.css",
+          "punctuation.separator.key-value.css",
+          "entity.other.attribute-name.pseudo-class.css",
+          "entity.other.attribute-name.pseudo-element.css",
+          "source.css",
+          "punctuation.terminator.rule.css",
+          "entity.other.attribute-name.js.jsx",
+          "entity.other.attribute-name"
+        ],
+        "settings": {
+          "fontStyle": "bold",
+          "foreground": "#d3eb4a"
+        }
+      },
+      {
+        "name": "Métodos nativos",
+        "scope": ["support.class.component", "support.class.component.js.jsx"],
+        "settings": {
+          "fontStyle": "bold",
+          "foreground": "#e5c07b"
+        }
+      },
+      {
+        "name": "Clases",
+        "scope": [
+          "support.class",
+          "entity.name.class",
+          "entity.name.type.class",
+          "entity.other.inherited-class",
+          "entity.other.inherited-class.js.jsx",
+          "entity.other.inherited-class.ts.tsx"
+        ],
+        "settings": {
+          "fontStyle": "bold",
+          "foreground": "#2bff00"
+        }
+      },
+      {
+        "name": "This",
+        "scope": [
+          "variable.language",
+          "variable.language.this",
+          "variable.language.this.js",
+          "variable.language.this.jsx",
+          "variable.language.this.ts",
+          "variable.language.this.tsx",
+          "variable.language.arguments",
+          "variable.language.arguments.ts.tsx"
+        ],
+        "settings": {
+          "foreground": "#e06c75"
+        }
+      },
+      {
+        "name": "Propiedades Obj TS y JS",
+        "scope": [
+          "variable.other.property",
+          "variable.other.property.ts",
+          "variable.other.property.js",
+          "meta.object-literal.key constant.numeric", // Captura las keys numéricas en objetos
+          "entity.other.attribute-name.class.css",
+          "entity.other.attribute-name.id.css",
+          "meta.property-name.css"
+        ],
+        "settings": {
+          "foreground": "#e06c75"
+        }
+      },
+      {
+        "name": "CSS valores",
+        "scope": [
+          "support.function.misc.css",
+          "support.constant.font-name.css"
+        ],
+        "settings": {
+          "foreground": "#f5953b"
+        }
+      },
+      {
+        "name": "CSS sin Bold",
+        "scope": [
+          "support.type.property-name.css",
+          "support.type.property-name.media.css"
+        ],
+        "settings": {
+          "fontStyle": ""
+        }
+      },
+      {
+        "name": "Singnos con Bold",
+        "scope": [
+          "punctuation.accessor",
+          "punctuation.accessor.js.jsx",
+          "punctuation.accessor.optional.js.jsx",
+          "punctuation.accessor.optional.ts.tsx"
+        ],
+        "settings": {
+          "fontStyle": "bold"
+        }
+      },
+      {
+        "name": "Key @keyframe",
+        "scope": ["variable.parameter.keyframe-list.css"],
+        "settings": {
+          "fontStyle": "",
+          "foreground": "#0befff"
+        }
+      },
+      {
+        "name": "HTML texto, =, prop privada",
+        "scope": [
+          "text.html.derivative",
+          "keyword.operator.assignment.js.jsx", // operador = en JS
+          "keyword.operator.assignment.ts.tsx",
+          "variable.object.property.js.jsx", // propiedad privada
+          "variable.object.property.ts.tsx",
+          "variable.other.object.property.js.jsx", // propiedad privada como propiedad
+          "variable.other.object.property.ts.tsx",
+          "support.constant.property-value.css"
+          // "meta.property-value.css"
+        ],
+        "settings": {
+          "foreground": "#dddddd"
+        }
+      },
+      {
+        "name": "Errores",
+        "scope": ["invalid", "invalid.deprecated", "invalid.illegal"],
+        "settings": {
+          "foreground": "#F44747"
+        }
+      }
+    ]
+  },
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.editor.enablePreview": false,
+  "files.associations": {
+    "*.svg": "xml"
+  },
+  "workbench.editorAssociations": {
+    "*.svg ": "default"
+  },
+  // Esto asegura que Prettier (si está instalado) también formatee al guardar
+  "editor.formatOnSave": true,
+  // Si se configura en true, el estilo estándar de JavaScript utilizará la configuración del proyecto ; de lo contrario, se utilizará el módulo package.jsoninstalado globalmente.standard
+  "standard.usePackageJson": true,
+  // Corrige los errores del linter al guardar
+  "standard.autoFixOnSave": true,
+  // Para validar que archivos tienen que ser validados
+  "standard.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  // Trata los errores del linter como advertencias
+  "standard.treatErrorsAsWarnings": true,
+  // Config esLint
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "eslint.run": "onType", // Esto permite que ESLint analice el código mientras lo escribes
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "eslint.problems.shortenToSingleLine": true,
+  "eslint.format.enable": true,
+  "eslint.alwaysShowStatus": true,
+  "eslint.workingDirectories": [{ "mode": "auto" }],
+  // Elegir el formateo por defecto de eslint, prettier, standarJS, vsCode.
+  "[javascript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  // Para ver los espacios como puntos en las tabulaciones
+  "editor.renderWhitespace": "all",
+  // Tamaño del "tab" = 2 espacios
+  "editor.tabSize": 2,
+  // Usa espacios en vez de `\t`
+  "editor.insertSpaces": true,
+  // No hereda el estilo del archivo
+  "editor.detectIndentation": false,
+  "workbench.sideBar.location": "right",
+  "editor.inlineSuggest.edits.showCollapsed": false,
+
+  // GitHub Copilot Config
+  // Desactivar sugerencias automáticas
+  "github.copilot.enable": {
+    "*": false,
+    "yaml": false,
+    "plaintext": false
+  },
+  "github.copilot.nextEditSuggestions.enabled": false,
+  "github.copilot.nextEditSuggestions.fixes": false,
+
+  // Configuración de chat
+  "github.copilot.chat.agent.runTasks": false,
+  "github.copilot.chat.localeOverride": "es",
+  "github.copilot.chat.scopeSelection": true,
+  "github.copilot.chat.reviewSelection.instructions": [],
+  "github.copilot.chat.agent.autoFix": false,
+
+  // Configuración del editor para sugerencias manuales únicamente
+  "editor.inlineSuggest.enabled": true,
+  "editor.inlineSuggest.suppressSuggestions": false,
+  "editor.suggestOnTriggerCharacters": true,
+  "editor.acceptSuggestionOnCommitCharacter": false,
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": false
+  },
+
+  // Configuración de contexto para Copilot
+  "editor.suggest.preview": true, // Muestra una vista previa de la sugerencia al pasar el cursor
+  "github.copilot.advanced": {
+    "context": {
+      "includeEditor": true,
+      "includeTabs": true,
+      "includeProject": true
+    }
+  },
+  "workbench.editor.empty.hint": "hidden"
+}

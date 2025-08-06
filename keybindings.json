@@ -1,41 +1,45 @@
 // Place your key bindings in this file to override the defaults
 [
-    {
-        "key": "alt+l alt+o",
-        "command": "livePreview.start.externalPreview.atFile"
-    },
-    {
-        "key": "alt+o alt+l",
-        "command": "livePreview.start.internalPreview.atFile"
-    },
-    {
-        "key": "alt+oem_3 alt+p",
-        "command": "extension.liveServer.goOnline",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "alt+l alt+o",
-        "command": "-extension.liveServer.goOnline",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "alt+p alt+oem_3",
-        "command": "extension.liveServer.goOffline",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "alt+l alt+c",
-        "command": "-extension.liveServer.goOffline",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "a",
-        "command": "explorer.newFile",
-        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
-    },
-    {
-        "key": "s",
-        "command": "explorer.newFolder",
-        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
-    }
+  {
+    "key": "alt+l alt+o",
+    "command": "livePreview.start.externalPreview.atFile"
+  },
+  {
+    "key": "alt+o alt+l",
+    "command": "livePreview.start.internalPreview.atFile"
+  },
+  {
+    "key": "alt+oem_3 alt+p",
+    "command": "extension.liveServer.goOnline",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+l alt+o",
+    "command": "-extension.liveServer.goOnline",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+p alt+oem_3",
+    "command": "extension.liveServer.goOffline",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+l alt+c",
+    "command": "-extension.liveServer.goOffline",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "a",
+    "command": "explorer.newFile",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "s",
+    "command": "explorer.newFolder",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "ctrl+oem_102",
+    "command": "github.copilot.generate"
+  }
 ]

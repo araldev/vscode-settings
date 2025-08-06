@@ -1,10 +1,7 @@
 {
-	"Console Log": {
-		"prefix": "clg",
-		"body": [
-			"console.log($1);",
-			"$2"
-		],
-		"description": "Log output to console"
-	}
+  "Console Log": {
+    "prefix": "clg",
+    "body": ["console.log($1);"],
+    "description": "Log output to console"
+  }
 }
